@@ -1,0 +1,34 @@
+ - name: The Verve Fedora
+   price: 49
+   description: Trilby-style fedora in 100% wool felt. Available in many colors, this quality hat has classic style with its presnap brim and smooth wool construction.  Finished with a grosgrain band and flight feather.  All 9th Street Hats ship in a protective hat box.
+   link: https://www.amazon.com/9th-Street-Trilby-Fedora-Colors/dp/B078Y91BXJ
+   main_image_name: 9th_street_verve.jpg
+   status: Available
+   tags: [9thstreet, fedora, wool, featured]
+   colors:
+    - name: Black
+      src: 9th_street_verve_black.jpg
+    - name: Brown
+      src: 9th_street_verve_brown.jpg
+    - name: Camel
+      src: 9th_street_verve_camel.jpg
+    - name: Moss
+      src: 9th_street_verve_moss.jpg
+    - name: Navy
+      src: 9th_street_verve_navy.jpg
+
+ - name: The Boxer Porkpie
+   price: 49
+   description: The boxer porkpie is a diamond-shape porkpie with classic turned up brim.  The melange wool is durable and soft to the touch, but firm enough to hold its shape.  All 9th street hats ship in a protective hat box.
+   link: https://www.amazon.com/9th-Street-Porkpie-Colors-Medium/dp/B078Y7PCG6
+   main_image_name: 9th_street_boxer.jpg
+   status: Available
+   tags: [9thstreet, fedora, wool, featured]
+   colors:
+    - name: Black
+      src: 9th_street_boxer_black.jpg
+    - name: Brown
+      src: 9th_street_boxer_brown.jpg
+    - name: Camel
+      src: 9th_street_boxer_camel.jpg
+

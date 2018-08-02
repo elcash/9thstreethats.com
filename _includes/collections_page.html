@@ -1,0 +1,60 @@
+<!-- Product-Details-page -->
+<div id="body">
+    <div class="content details-page">
+        <!---start-product-details--->
+        <div class="product-details">
+            <div class="container">
+                <ul class="product-head">
+                    <!--<a style="text-align:left" href="collections.html">Collections</a> <span>::</span> {{ page.title }}-->
+                    <!--<h1><span class="title-span">9th Street Hats</span></h1>-->
+                    <div class="clearfix"> </div>
+                </ul>
+                <!--create empty array-->
+                {% assign hat_hash = "" | split: "/" %}
+
+                {% for hat in site.data.hats %}
+
+                {% for tag in page.tag_to_include %}
+                {% if hat.tags contains tag %}
+                <!-- add hat to the array you initialized -->
+                {% assign hat_hash = hat_hash | push: hat %}
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+
+                {% for hat in hat_hash %}
+                <div class="details-left">
+                    <div class="details-left-slider">
+
+                        <a title="Buy {{ hat.name }} at Amazon.com" href="{{ hat.link }}"><img class="main-product-image" src="images/products/{{ hat.main_image_name }}" style="display: inline; width: 350px; height: auto; opacity: 1;"></a>
+                    </div>
+                    <div class="details-left-info">
+                        <div class="details-right-head">
+                            <h1><a class="product-title" title="Check {{ hat.name }} price at Amazon.com" href="{{ hat.link }}">{{ hat.name }}</a></h1>
+                            <p class="product-detail-info">{{ hat.description }}</p>
+                            <div class="product-more-details">
+                                <!--<ul style="display: inline;" class="price-avl">
+                                    <li style="border:none;" class="price"><span>${{ hat.price }}</span></li>
+                                    <div class="clearfix"> </div>
+                                </ul>-->
+                                <ul style="width:auto; padding:1.5em;" class="product-colors">
+                                    <!--<h3>Available Colors ::</h3>-->
+                                    {% for color in hat.colors %}
+                                        <a title="{{ color.name }}" href="{{ hat.link }}"><img style="margin: 3px; border:1px solid #aaa; padding: 6px; height:49px; width:66px;" src="images/products/{{ color.src }}"/></a>
+                                    {% endfor %}
+
+                                    <div class="clearfix"> </div>
+                                <a href="{{ hat.link }}" title="buy on amazon"> <img class="amazon-buy-button" src="images/icons/buy-from-amazon.gif"/> </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                            <br/><br/>
+                </div>
+                {% endfor %}
+            </div>
+            <!---//End-product-details--->
+        </div>
+    </div>
+</div>
+<!-- /Product-Details-page -->
